@@ -51,14 +51,17 @@
     <section class="about">
       <div class="about__grid">
         <h2 class="about__title">О нас</h2>
-        <img src="./images/woman.jpg" alt="Женщина с ноутбуком" class="about__img">
-        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aperiam, similique
+        <img src="./images/woman.jpg" alt="Женщина с ноутбуком" class="about__img about__img_woman">
+        <p class="about__text about__text_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+          aperiam, similique
           adipisci sequi quae iure quaerat vel quidem quisquam, pariatur eaque ea blanditiis alias. Saepe totam impedit
           vitae ullam ducimus.</p>
-        <img src="./images/girl__dancers.jpg" alt="Танцовщицы" class="about__img">
-        <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus atque aspernatur non
-          quos consequuntur enim labore obcaecati cupiditate ad eius vero voluptatum sint explicabo, aperiam illo facere
-          dolorum doloremque nostrum.</p>
+        <img src="./images/girl__dancers.jpg" alt="Танцовщицы" class="about__img about__img_dancers">
+        <p class="about__text about__text_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. </p>
       </div>
     </section>
     <section class="schedule">
@@ -66,8 +69,9 @@
       <p class="schedule__subtitle">Детские направления</p>
       <div class="schedule__block">
         <nav class="schedule__nav">
+          <button type="button" class="schedule__slide-btn schedule__slide-btn_prev"></button>
           <ul class="schedule__weekday-list">
-            <li class="schedule__weekday">ПН</li>
+            <li class="schedule__weekday schedule__weekday_active">ПН</li>
             <li class="schedule__weekday">ВТ</li>
             <li class="schedule__weekday">СР</li>
             <li class="schedule__weekday">ЧТ</li>
@@ -75,17 +79,34 @@
             <li class="schedule__weekday">СБ</li>
             <li class="schedule__weekday">ВС</li>
           </ul>
-          <span class="schedule__btn-prev"></span>
-          <span class="schedule__btn-next"></span>
+          <button type="button" class="schedule__slide-btn schedule__slide-btn_next"></button>
         </nav>
         <div class="schedule__slide">
           <div class="schedule__row">
-            <p class="schedule__time"></p>
+            <p class="schedule__time">14:00-15:30</p>
             <div class="schedule__row-content">
               <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
               <p class="schedule__teacher">Преподаватель:</p>
-              <p class="schedule__level">Уровень сложности:</p>
-              <button type="button" class="schedule__button">Записаться</button>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
             </div>
           </div>
         </div>
