@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'PP Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./NeueMachina-Regular.woff) format("woff"),
+    url(./NeueMachina-Regular.woff2) format("woff2");
+}

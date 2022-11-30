@@ -5,6 +5,135 @@
   color: #fff;
 }
 
+.header {
+  padding-top: 33px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  position: relative;
+  left: -73px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__logo {
+  width: 168px;
+  transition: all .5s ease;
+}
+
+.header__logo:hover {
+  opacity: .4;
+}
+
+.header__menu {
+  margin-left: 79px;
+  margin-bottom: 24px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 687px;
+}
+
+.header__menu-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.header__menu-link:hover {
+  color: #fff;
+  opacity: .5;
+}
+
+.intro {
+  position: relative;
+  min-height: 814px;
+  max-width: 1156px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  font-family: 'PP Neue Machina';
+  font-size: 110px;
+  line-height: 117px;
+  text-transform: uppercase;
+  max-width: 629px;
+  padding-top: 166px;
+  margin: 0 0px 93px 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.intro__title-first {
+  margin-left: 96px;
+}
+
+.intro__title-last {
+  margin-left: 197px;
+}
+
+.button {
+  background: rgba(146, 146, 146, 0.4);
+  backdrop-filter: blur(2px);
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+}
+
+.intro__button {
+  width: 378px;
+  height: 88px;
+  border-radius: 30px;
+  font-family: 'PP Neue Machina';
+  font-size: 30px;
+  line-height: 31px;
+  display: block;
+  margin-left: 143px;
+}
+
+.intro__img {
+  position: absolute;
+  display: block;
+  width: 584px;
+  border-radius: 30px;
+  top: -16px;
+  right: -30px;
+}
+
+.about__grid {
+  display: grid;
+  max-width: 1072px;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
+.about__img {
+  border-radius: 30px;
+}
+
+.about__text {
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .teachers__slide {
   transition: all .5s ease;
 }
