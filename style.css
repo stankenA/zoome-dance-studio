@@ -1,0 +1,36 @@
+.page {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0C0D11;
+  color: #fff;
+}
+
+.teachers__slide {
+  transition: all .5s ease;
+}
+
+.swiper-slide-prev {
+  background-color: aqua;
+  width: 150px;
+  height: 150px;
+}
+
+.swiper-slide-next {
+  background-color: aqua;
+  width: 150px;
+  height: 150px;
+}
+
+.teachers__slide.swiper-slide-active {
+  width: 300px;
+  background-color: blueviolet;
+  height: 300px;
+}
+
+.teachers {
+  min-height: 700px;
+}
+
+.feedback__card {
+  height: 300px;
+}
