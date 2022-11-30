@@ -3,9 +3,10 @@ var swiper = new Swiper(".teachers__swiper", {
   initialSlide: 1,
   spaceBetween: 60,
   centeredSlides: true,
+  grabCursor: true,
   navigation: {
-    nextEl: ".teachers__slide-button-next",
-    prevEl: ".teachers__slide-button-prev",
+    nextEl: ".teachers__slide-button_next",
+    prevEl: ".teachers__slide-button_prev",
   },
 });
 
