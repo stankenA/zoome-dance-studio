@@ -183,6 +183,10 @@
   margin: 123px auto 0;
 }
 
+.schedule__block {
+  margin-bottom: 95px;
+}
+
 .schedule__title {
   font-family: 'PP Neue Machina';
   font-size: 70px;
@@ -271,6 +275,10 @@
   border-bottom: 1px solid #FFFFFF;
 }
 
+.schedule__row:last-child {
+  border-bottom: none;
+}
+
 .schedule__row-content {
   display: flex;
   justify-content: space-between;
@@ -302,30 +310,66 @@
   border-radius: 30px;
 }
 
+.teachers {
+  min-height: 688px;
+}
+
+.teachers__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto 65px;
+}
+
+.teachers__wrapper {
+  list-style: none;
+  padding: 0;
+}
+
 .teachers__slide {
   transition: all .5s ease;
+  width: 233px;
+  height: 509px;
 }
 
-.swiper-slide-prev {
-  background-color: aqua;
-  width: 150px;
-  height: 150px;
+.teachers__slide.swiper-slide-next {
+  width: 233px;
+  height: 509px;
 }
 
-.swiper-slide-next {
-  background-color: aqua;
-  width: 150px;
-  height: 150px;
+.teachers__slide.swiper-slide-prev {
+  width: 233px;
+  height: 509px;
+}
+
+.teachers__img {
+  width: 100%;
+  height: 60%;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+.teachers__img.swiper-slide-active {
+  height: 72%;
+}
+
+.teachers__subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.teachers__txt {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .teachers__slide.swiper-slide-active {
-  width: 300px;
-  background-color: blueviolet;
-  height: 300px;
-}
-
-.teachers {
-  min-height: 700px;
+  width: 320px;
+  height: 558px;
 }
 
 .feedback__card {

@@ -1,7 +1,7 @@
 var swiper = new Swiper(".teachers__swiper", {
   slidesPerView: 3,
   initialSlide: 1,
-  spaceBetween: 30,
+  spaceBetween: 60,
   centeredSlides: true,
   navigation: {
     nextEl: ".teachers__slide-button-next",
