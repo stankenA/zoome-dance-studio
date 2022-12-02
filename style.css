@@ -352,11 +352,11 @@
 }
 
 .teachers__slide-button_prev {
-  background: url(./images/teachers__prev.svg) no-repeat center;
+  background: url(./images/arrow__prev.svg) no-repeat center;
 }
 
 .teachers__slide-button_next {
-  background: url(./images/teachers__next.svg) no-repeat center;
+  background: url(./images/arrow__next.svg) no-repeat center;
 }
 
 .teachers__title {
@@ -415,6 +415,194 @@
   line-height: 22px;
 }
 
+.gallery {
+  min-height: 700px;
+}
+
+.gallery__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+  width: 578px;
+  margin: 0 auto;
+}
+
+.feedback {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.feedback__title {
+  margin: 0 0 51px;
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
 .feedback__card {
-  height: 300px;
+  display: grid;
+  column-gap: 31px;
+  row-gap: 14px;
+  padding: 27px 0 28px 28px;
+  grid-template-columns: 109px 860px;
+  grid-template-rows: max-content 1fr;
+  min-height: 164px;
+  max-height: 342px;
+  width: 100%;
+  border-radius: 30px;
+  background: rgba(146, 146, 146, 0.4);
+  backdrop-filter: blur(2px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.feedback__img {
+  width: 109px;
+  height: 109px;
+  border-radius: 50%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.feedback__user-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.feedback__txt {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.feedback__bottom-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.feedback__link {
+  margin-right: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all .3s ease;
+}
+
+.feedback__link:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.feedback__slide-btn {
+  width: 107px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+  transition: all .3s ease;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.feedback__slide-btn:hover {
+  opacity: .7;
+}
+
+.feedback__slide-btn_next {
+  background: url(./images/arrow__next.svg) no-repeat center;
+}
+
+.feedback__slide-btn_prev {
+  margin-right: auto;
+  justify-self: flex-start;
+  background: url(./images/arrow__prev.svg) no-repeat center;
+}
+
+.feedback__pagination {
+  display: none;
+}
+
+.contacts {
+  max-width: 1128px;
+  margin: 115px auto 79px;
+  min-height: 452px;
+}
+
+.contacts__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+  margin: 0 auto 68px;
+  max-width: 415px;
+}
+
+.contacts__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contacts__txt {
+  margin: 0 0 52px;
+  max-width: 310px;
+}
+
+.contacts__number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.contacts__social {
+  display: flex;
+  margin-top: 49px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.contacts__link:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.contacts__link-logo {
+  width: 49px;
+  height: 49px;
+  margin-right: 19px;
+}
+
+.contacts__map {
+  display: block;
+  width: 660px;
+  height: 336px;
+  border: 1px solid white;
+  margin: -16px 0 0;
+}
+
+@media screen and (max-width: 1439px) {
+  .header {
+    max-width: 730px;
+    padding-top: 10px;
+  }
+
+  .intro__img {
+    width: 505px;
+  }
+
+  .intro__title {
+    font-size: 86px;
+    line-height: 91px;
+    padding-top: 130px;
+    margin-left: 90px;
+  }
 }
