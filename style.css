@@ -2,7 +2,12 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background-color: #0C0D11;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.7) 0%, rgba(19, 80, 99, 0) 100%);
   color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .header {
@@ -90,6 +95,11 @@
   color: #fff;
   text-align: center;
   padding: 0;
+  transition: all .3s ease-in;
+}
+
+.button:hover {
+  background: rgba(146, 146, 146, 0.6);
 }
 
 .intro__button {
@@ -112,10 +122,33 @@
   right: -30px;
 }
 
+.intro__img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(12, 13, 17, 0.94) 0%, rgba(12, 13, 17, 0.62) 22.23%, rgba(12, 13, 17, 0) 71.14%);
+}
+
 .about__grid {
   display: grid;
+  grid-template-columns: 356px 271px 334px;
+  grid-template-rows: 110px 93px 172px 90px;
+  grid-template-areas:
+    "woman title ."
+    "woman txt1 txt1"
+    "woman dancers txt2"
+    ". dancers txt2";
+  column-gap: 55px;
+  row-gap: 32px;
   max-width: 1072px;
   margin: 0 auto;
+  padding-top: 110px;
+  position: relative;
+  left: -22px;
 }
 
 .about__title {
@@ -123,10 +156,23 @@
   font-size: 70px;
   line-height: 72px;
   text-transform: uppercase;
+  grid-area: title;
+  align-self: flex-end;
+  margin-bottom: 13px;
 }
 
 .about__img {
   border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.about__img_woman {
+  grid-area: woman;
+}
+
+.about__img_dancers {
+  grid-area: dancers;
 }
 
 .about__text {
@@ -134,32 +180,429 @@
   line-height: 22px;
 }
 
+.about__text_1 {
+  grid-area: txt1;
+  margin-top: -14px;
+}
+
+.about__text_2 {
+  margin-top: 26px;
+  grid-area: txt2;
+}
+
+.schedule {
+  max-width: 1173px;
+  margin: 123px auto 0;
+}
+
+.schedule__block {
+  margin-bottom: 95px;
+}
+
+.schedule__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.schedule__subtitle {
+  font-family: 'PP Neue Machina';
+  font-size: 50px;
+  line-height: 51px;
+  text-transform: uppercase;
+  margin: 38px 0 58px 0;
+}
+
+.schedule__nav {
+  width: 816px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule__slide-btn {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: opacity .3s ease;
+}
+
+.schedule__slide-btn:hover {
+  opacity: .6;
+}
+
+.schedule__slide-btn_prev {
+  background: url(./images/schedule__prev-btn.svg) no-repeat center;
+}
+
+.schedule__slide-btn_next {
+  background: url(./images/schedule__next-btn.svg) no-repeat center;
+}
+
+.schedule__weekday-list {
+  display: flex;
+  justify-content: space-between;
+  width: 624px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.schedule__weekday {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  width: 55px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+}
+
+.schedule__weekday:hover {
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.schedule__weekday_active {
+  border: 1px solid #fff;
+}
+
+.schedule__slide {
+  margin-top: 58px;
+}
+
+.schedule__row {
+  display: flex;
+  align-items: center;
+  padding-left: 82px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.schedule__row:last-child {
+  border-bottom: none;
+}
+
+.schedule__row-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  width: 880px;
+  min-height: 76px;
+}
+
+.schedule__lesson {
+  width: 171px;
+  text-align: center;
+}
+
+.schedule__teacher {
+  width: 195px;
+  text-align: center;
+}
+
+.schedule__level {
+  width: 195px;
+  text-align: center;
+}
+
+.schedule__button {
+  width: 199px;
+  height: 50px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.teachers {
+  min-height: 688px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.teachers__title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.teachers__slide-button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  width: 107px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+  transition: all .4s ease;
+}
+
+.teachers__slide-button:hover {
+  opacity: .6;
+}
+
+.teachers__slide-button_prev {
+  background: url(./images/arrow__prev.svg) no-repeat center;
+}
+
+.teachers__slide-button_next {
+  background: url(./images/arrow__next.svg) no-repeat center;
+}
+
+.teachers__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.teachers__wrapper {
+  list-style: none;
+  padding: 0;
+  min-height: 700px;
+}
+
 .teachers__slide {
   transition: all .5s ease;
 }
 
-.swiper-slide-prev {
-  background-color: aqua;
-  width: 150px;
-  height: 150px;
+.teachers__slide.swiper-slide-next {
+  width: 233px !important;
+  height: 509px !important;
 }
 
-.swiper-slide-next {
-  background-color: aqua;
-  width: 150px;
-  height: 150px;
+.teachers__slide.swiper-slide-prev {
+  width: 233px !important;
+  height: 509px !important;
 }
 
 .teachers__slide.swiper-slide-active {
-  width: 300px;
-  background-color: blueviolet;
-  height: 300px;
+  width: 320px !important;
+  height: 558px !important;
 }
 
-.teachers {
+.teachers__img {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 42px;
+}
+
+.teachers__img.swiper-slide-active {
+  height: 72%;
+}
+
+.teachers__subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.teachers__txt {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.gallery {
   min-height: 700px;
 }
 
+.gallery__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+  width: 578px;
+  margin: 0 auto;
+}
+
+.feedback {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.feedback__title {
+  margin: 0 0 51px;
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
 .feedback__card {
-  height: 300px;
+  display: grid;
+  column-gap: 31px;
+  row-gap: 14px;
+  padding: 27px 0 28px 28px;
+  grid-template-columns: 109px 860px;
+  grid-template-rows: max-content 1fr;
+  min-height: 164px;
+  max-height: 342px;
+  width: 100%;
+  border-radius: 30px;
+  background: rgba(146, 146, 146, 0.4);
+  backdrop-filter: blur(2px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.feedback__img {
+  width: 109px;
+  height: 109px;
+  border-radius: 50%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.feedback__user-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.feedback__txt {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.feedback__bottom-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.feedback__link {
+  margin-right: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all .3s ease;
+}
+
+.feedback__link:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.feedback__slide-btn {
+  width: 107px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+  transition: all .3s ease;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.feedback__slide-btn:hover {
+  opacity: .7;
+}
+
+.feedback__slide-btn_next {
+  background: url(./images/arrow__next.svg) no-repeat center;
+}
+
+.feedback__slide-btn_prev {
+  margin-right: auto;
+  justify-self: flex-start;
+  background: url(./images/arrow__prev.svg) no-repeat center;
+}
+
+.feedback__pagination {
+  display: none;
+}
+
+.contacts {
+  max-width: 1128px;
+  margin: 115px auto 79px;
+  min-height: 452px;
+}
+
+.contacts__title {
+  font-family: 'PP Neue Machina';
+  font-size: 70px;
+  line-height: 72px;
+  text-transform: uppercase;
+  margin: 0 auto 68px;
+  max-width: 415px;
+}
+
+.contacts__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contacts__txt {
+  margin: 0 0 52px;
+  max-width: 310px;
+}
+
+.contacts__number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.contacts__social {
+  display: flex;
+  margin-top: 49px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.contacts__link:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.contacts__link-logo {
+  width: 49px;
+  height: 49px;
+  margin-right: 19px;
+}
+
+.contacts__map {
+  display: block;
+  width: 660px;
+  height: 336px;
+  border: 1px solid white;
+  margin: -16px 0 0;
+}
+
+@media screen and (max-width: 1439px) {
+  .header {
+    max-width: 730px;
+    padding-top: 10px;
+  }
+
+  .intro__img {
+    width: 505px;
+  }
+
+  .intro__title {
+    font-size: 86px;
+    line-height: 91px;
+    padding-top: 130px;
+    margin-left: 90px;
+  }
 }

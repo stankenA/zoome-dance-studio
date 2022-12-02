@@ -51,14 +51,17 @@
     <section class="about">
       <div class="about__grid">
         <h2 class="about__title">О нас</h2>
-        <img src="./images/woman.jpg" alt="Женщина с ноутбуком" class="about__img">
-        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aperiam, similique
+        <img src="./images/woman.jpg" alt="Женщина с ноутбуком" class="about__img about__img_woman">
+        <p class="about__text about__text_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+          aperiam, similique
           adipisci sequi quae iure quaerat vel quidem quisquam, pariatur eaque ea blanditiis alias. Saepe totam impedit
           vitae ullam ducimus.</p>
-        <img src="./images/girl__dancers.jpg" alt="Танцовщицы" class="about__img">
-        <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus atque aspernatur non
-          quos consequuntur enim labore obcaecati cupiditate ad eius vero voluptatum sint explicabo, aperiam illo facere
-          dolorum doloremque nostrum.</p>
+        <img src="./images/girl__dancers.jpg" alt="Танцовщицы" class="about__img about__img_dancers">
+        <p class="about__text about__text_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. </p>
       </div>
     </section>
     <section class="schedule">
@@ -66,8 +69,9 @@
       <p class="schedule__subtitle">Детские направления</p>
       <div class="schedule__block">
         <nav class="schedule__nav">
+          <button type="button" class="schedule__slide-btn schedule__slide-btn_prev"></button>
           <ul class="schedule__weekday-list">
-            <li class="schedule__weekday">ПН</li>
+            <li class="schedule__weekday schedule__weekday_active">ПН</li>
             <li class="schedule__weekday">ВТ</li>
             <li class="schedule__weekday">СР</li>
             <li class="schedule__weekday">ЧТ</li>
@@ -75,28 +79,94 @@
             <li class="schedule__weekday">СБ</li>
             <li class="schedule__weekday">ВС</li>
           </ul>
-          <span class="schedule__btn-prev"></span>
-          <span class="schedule__btn-next"></span>
+          <button type="button" class="schedule__slide-btn schedule__slide-btn_next"></button>
         </nav>
         <div class="schedule__slide">
           <div class="schedule__row">
-            <p class="schedule__time"></p>
+            <p class="schedule__time">14:00-15:30</p>
             <div class="schedule__row-content">
               <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
               <p class="schedule__teacher">Преподаватель:</p>
-              <p class="schedule__level">Уровень сложности:</p>
-              <button type="button" class="schedule__button">Записаться</button>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="schedule__subtitle">Взрослые направления</p>
+      <div class="schedule__block">
+        <nav class="schedule__nav">
+          <button type="button" class="schedule__slide-btn schedule__slide-btn_prev"></button>
+          <ul class="schedule__weekday-list">
+            <li class="schedule__weekday schedule__weekday_active">ПН</li>
+            <li class="schedule__weekday">ВТ</li>
+            <li class="schedule__weekday">СР</li>
+            <li class="schedule__weekday">ЧТ</li>
+            <li class="schedule__weekday">ПТ</li>
+            <li class="schedule__weekday">СБ</li>
+            <li class="schedule__weekday">ВС</li>
+          </ul>
+          <button type="button" class="schedule__slide-btn schedule__slide-btn_next"></button>
+        </nav>
+        <div class="schedule__slide">
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <p class="schedule__time">14:00-15:30</p>
+            <div class="schedule__row-content">
+              <p class="schedule__lesson">Современная хореография (от 7 лет)</p>
+              <p class="schedule__teacher">Преподаватель:</p>
+              <p class="schedule__level">Уровень сложности: продолжающие</p>
+              <button type="button" class="schedule__button button">Записаться</button>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="teachers">
-      <h2 class="teachers__title">Преподаватели</h2>
+      <div class="teachers__title-container">
+        <button type="button" class="teachers__slide-button teachers__slide-button_prev"></button>
+        <h2 class="teachers__title">Преподаватели</h2>
+        <button type="button" class="teachers__slide-button teachers__slide-button_next"></button>
+      </div>
       <div class="teachers__swiper swiper">
         <ul class="teachers__wrapper swiper-wrapper">
           <li class="teachers__slide swiper-slide">
-            <img src="#" alt="Фото учителя" class="teachers__img">
+            <img src="./images/teacher_1.jpg" alt="Фото учителя" class="teachers__img">
             <h3 class="teachers__subtitle">Lorem ipsum</h3>
             <p class="teachers__txt">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iusto beatae quo odit animi culpa
@@ -105,7 +175,7 @@
             </p>
           </li>
           <li class="teachers__slide swiper-slide">
-            <img src="#" alt="Фото учителя" class="teachers__img">
+            <img src="./images/teacher_2.jpg" alt="Фото учителя" class="teachers__img">
             <h3 class="teachers__subtitle">Lorem ipsum</h3>
             <p class="teachers__txt">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iusto beatae quo odit animi culpa
@@ -114,7 +184,7 @@
             </p>
           </li>
           <li class="teachers__slide swiper-slide">
-            <img src="#" alt="Фото учителя" class="teachers__img">
+            <img src="./images/teacher_3.jpg" alt="Фото учителя" class="teachers__img">
             <h3 class="teachers__subtitle">Lorem ipsum</h3>
             <p class="teachers__txt">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iusto beatae quo odit animi culpa
@@ -123,8 +193,6 @@
             </p>
           </li>
         </ul>
-        <span class="teachers__slide-button-prev"></span>
-        <span class="teachers__slide-button-next"></span>
       </div>
     </section>
     <section class="gallery">
@@ -139,8 +207,26 @@
         <div class="feedback__wrapper swiper-wrapper">
           <div class="feedback__slide swiper-slide">
             <div class="feedback__card">
-              <img src="#" alt="Картинка пользователия" class="feedback__img">
-              <p class="feeback__user-name">Lorem ipsum</p>
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
+              <p class="feedback__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
+                alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
+                laboriosam?
+              </p>
+            </div>
+            <div class="feedback__card">
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
+              <p class="feedback__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
+                alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
+                laboriosam?
+              </p>
+            </div>
+            <div class="feedback__card">
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
               <p class="feedback__txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
                 alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
@@ -150,8 +236,26 @@
           </div>
           <div class="feedback__slide swiper-slide">
             <div class="feedback__card">
-              <img src="#" alt="Картинка пользователия" class="feedback__img">
-              <p class="feeback__user-name">Lorem ipsum</p>
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
+              <p class="feedback__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
+                alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
+                laboriosam?
+              </p>
+            </div>
+            <div class="feedback__card">
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
+              <p class="feedback__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
+                alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
+                laboriosam?
+              </p>
+            </div>
+            <div class="feedback__card">
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
               <p class="feedback__txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
                 alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
@@ -161,8 +265,26 @@
           </div>
           <div class="feedback__slide swiper-slide">
             <div class="feedback__card">
-              <img src="#" alt="Картинка пользователия" class="feedback__img">
-              <p class="feeback__user-name">Lorem ipsum</p>
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
+              <p class="feedback__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
+                alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
+                laboriosam?
+              </p>
+            </div>
+            <div class="feedback__card">
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
+              <p class="feedback__txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
+                alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
+                laboriosam?
+              </p>
+            </div>
+            <div class="feedback__card">
+              <img src="./images/user_1.jpg" alt="Картинка пользователия" class="feedback__img">
+              <p class="feedback__user-name">Lorem ipsum</p>
               <p class="feedback__txt">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis, mollitia repudiandae velit impedit
                 alias, beatae blanditiis quam corrupti explicabo natus ad? Eligendi nisi, ipsa ea tempora voluptas iusto
@@ -171,8 +293,11 @@
             </div>
           </div>
         </div>
-        <span class="feedback__slide-button-prev"></span>
-        <span class="feedback__slide-button-next"></span>
+        <div class="feedback__bottom-container">
+          <button class="feedback__slide-btn feedback__slide-btn_prev"></button>
+          <a href="#" class="feedback__link">Читать больше</a>
+          <button class="feedback__slide-btn feedback__slide-btn_next"></button>
+        </div>
         <div class="feedback__pagination"></div>
       </div>
     </section>
@@ -182,13 +307,15 @@
         <div class="contacts__info">
           <p class="contacts__txt">До встречи в ZOOME DANCE STUDIO</p>
           <p class="contacts__txt">улица Рядового Леонида Иванова, 2Г п. Кузьмоловский</p>
-          <p class="contacts__txt">+7 (962) 717-88-71</p>
+          <p class="contacts__number">+7 (962) 717-88-71</p>
           <div class="contacts__social">
-            <a href="#" class="contacts__link"><img src="#" alt="Логотип ВК" class="contacts__link-logo"></a>
-            <a href="#" class="contacts__link"><img src="#" alt="Логотип Инстаграм" class="contacts__link-logo"></a>
+            <a href="#" class="contacts__link"><img src="./images/vk.png" alt="Логотип ВК"
+                class="contacts__link-logo"></a>
+            <a href="#" class="contacts__link"><img src="./images/instagram.png" alt="Логотип Инстаграм"
+                class="contacts__link-logo"></a>
           </div>
         </div>
-        <div class="api"></div>
+        <iframe frameborder="0" class="contacts__map"></iframe>
       </div>
     </section>
   </main>
@@ -196,6 +323,7 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <script src="./scripts/index.js"></script>
 </body>
 
