@@ -1,35 +1,42 @@
-//Tabs
+//Табы
 
-var currentTab = 1;
-$("#contetn1").show();
+const childrenSchedule = document.querySelector('.schedule__block_children');
+const childrenWeekdays = childrenSchedule.querySelectorAll('.schedule__weekday');
+const allSlidesChildren = childrenSchedule.querySelector('.schedule__slides');
+const adultSchedule = document.querySelector('.schedule__block_adult');
+const adultWeekdays = adultSchedule.querySelectorAll('.schedule__weekday');
 
-$(document).on('click', 'nav.multiTabs>a',
-  function () {
-    var TabId = $(this).attr('data-trigger');
-    $('div#' + TabId + ' ').show();
+function openSlide(slide) {
+  slide.classList.add('schedule__slide_active');
+};
 
-    console.log("Current Tab: " + TabId);
-    currentTab = parseInt(TabId.replace("content", ""));
+function closeSlide(slide) {
+  slide.classList.remove('schedule__slide_active');
+}
 
-    $('.tabcontent:not(#' + TabId + ')').hide()
-
+childrenWeekdays.forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    childrenSchedule.querySelector('.schedule__weekday_active').classList.remove('schedule__weekday_active');
+    evt.target.classList.add('schedule__weekday_active');
+    closeSlide(allSlidesChildren.querySelector('.schedule__slide_active'));
+    openSlide(allSlidesChildren.querySelector(`#${evt.target.id}`));
   });
+});
 
-function next() {
-  if (currentTab < 5) {
-    $(".tabcontent").hide();
-    currentTab++;
-    $("#content" + (currentTab)).show();
-  }
-}
+const childrenBtnPrev = childrenSchedule.querySelector('.schedule__slide-btn_prev');
+const childrenBtnNext = childrenSchedule.querySelector('.schedule__slide-btn_next');
 
-function prev() {
-  if (currentTab > 1) {
-    $(".tabcontent").hide();
-    currentTab--;
-    $("#content" + (currentTab)).show();
-  }
-}
+childrenBtnPrev.addEventListener('click', () => {
+  childrenSchedule.querySelector('.schedule__weekday_active').classList.remove('schedule__weekday_active');
+  console.log(childrenSchedule.querySelector('.schedule__weekday').previousSibling);
+});
+
+// adultWeekdays.forEach((item) => {
+//   item.addEventListener('click', (evt) => {
+//     adultSchedule.querySelector('.schedule__weekday_active').classList.remove('schedule__weekday_active');
+//     evt.target.classList.add('schedule__weekday_active');
+//   });
+// });
 
 //Swipers
 

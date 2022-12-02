@@ -197,6 +197,7 @@
 
 .schedule__block {
   margin-bottom: 95px;
+  min-height: 366px;
 }
 
 .schedule__title {
@@ -221,6 +222,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.schedule__link {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.schedule__link:hover {
+  color: #fff;
+}
+
+.schedule__slide {
+  display: none;
+}
+
+.schedule__slide_active {
+  display: block;
 }
 
 .schedule__slide-btn {
@@ -300,6 +324,11 @@
   margin-left: 40px;
   width: 880px;
   min-height: 76px;
+}
+
+.schedule__time {
+  width: 90px;
+  text-align: center;
 }
 
 .schedule__lesson {
