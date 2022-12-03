@@ -1,3 +1,11 @@
+//Кнопка меню
+
+const menuButton = document.querySelector('.header__hamburger');
+
+menuButton.addEventListener('click', (evt) => {
+  evt.target.classList.toggle('header__hamburger_active');
+})
+
 //Табы
 
 const childrenSchedule = document.querySelector('.schedule__block_children');
