@@ -380,11 +380,11 @@
 }
 
 .teachers__slide-button_prev {
-  background: url(./images/arrow__prev.svg) no-repeat center;
+  background: url(./images/arrow__prev.svg) no-repeat center / contain;
 }
 
 .teachers__slide-button_next {
-  background: url(./images/arrow__next.svg) no-repeat center;
+  background: url(./images/arrow__next.svg) no-repeat center / contain;
 }
 
 .teachers__title {
@@ -396,6 +396,10 @@
   margin: 0 auto;
 }
 
+.teachers__swiper {
+  left: 32px;
+}
+
 .teachers__wrapper {
   list-style: none;
   padding: 0;
@@ -404,6 +408,8 @@
 
 .teachers__slide {
   transition: all .5s ease;
+  visibility: visible;
+  opacity: 1;
 }
 
 .teachers__slide.swiper-slide-next {
@@ -443,17 +449,76 @@
   line-height: 22px;
 }
 
-.gallery {
-  min-height: 700px;
-}
-
 .gallery__title {
   font-family: 'PP Neue Machina';
   font-size: 70px;
   line-height: 72px;
   text-transform: uppercase;
   width: 578px;
-  margin: 0 auto;
+  margin: 0 auto 61px;
+}
+
+.gallery__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 160px;
+  gap: 15px;
+  grid-auto-flow: dense;
+  margin-bottom: 68px;
+}
+
+.gallery__grid::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 335px;
+  background: linear-gradient(90deg, #0C0D11 7.81%, rgba(12, 13, 17, 0.41) 71.35%, rgba(12, 13, 17, 0) 100%);
+}
+
+.gallery__grid::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 335px;
+  background: linear-gradient(90deg, #0C0D11 7.81%, rgba(12, 13, 17, 0.41) 71.35%, rgba(12, 13, 17, 0) 100%);
+  transform: rotate(180deg);
+}
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.gallery__img_col-2 {
+  grid-column: span 2;
+}
+
+.gallery__img_row-2 {
+  grid-row: span 2;
+}
+
+.gallery__img_col-3 {
+  grid-column: span 3;
+}
+
+.gallery__img_row-3 {
+  grid-row: span 3;
+}
+
+.gallery__img_col-4 {
+  grid-column: span 4;
+}
+
+.gallery__img_row-4 {
+  grid-row: span 4;
 }
 
 .feedback {
@@ -558,7 +623,6 @@
 .contacts {
   max-width: 1128px;
   margin: 115px auto 79px;
-  min-height: 452px;
 }
 
 .contacts__title {
@@ -623,7 +687,16 @@
     padding-top: 10px;
   }
 
+  .header__menu {
+    width: 624px;
+  }
+
+  .intro {
+    min-height: 720px;
+  }
+
   .intro__img {
+    right: 0;
     width: 505px;
   }
 
@@ -631,6 +704,701 @@
     font-size: 86px;
     line-height: 91px;
     padding-top: 130px;
-    margin-left: 90px;
+    margin-left: 61px;
+  }
+
+  .intro__button {
+    margin-left: 105px;
+  }
+
+  .about__grid {
+    grid-template-columns: 312px 240px 306px;
+    grid-template-rows: 110px 93px 172px 111px;
+    left: 0;
+    justify-content: center;
+  }
+
+  .about__text {
+    margin: 0;
+  }
+
+  .schedule {
+    max-width: 890px;
+  }
+
+  .schedule__block {
+    margin-bottom: 80px;
+  }
+
+  .schedule__title {
+    font-size: 64px;
+  }
+
+  .schedule__subtitle {
+    margin: 18px 0 44px 0;
+    font-size: 40px;
+  }
+
+  .schedule__row {
+    padding-left: 16px;
+  }
+
+  .teachers__swiper {
+    width: 90%;
+    left: 16px;
+  }
+
+  .teachers__slide.swiper-slide-active {
+    width: 284px !important;
+  }
+
+  .teachers__slide.swiper-slide-next {
+    width: 212px !important;
+  }
+
+  .teachers__slide.swiper-slide-prev {
+    width: 212px !important;
+  }
+
+  .feedback {
+    width: 910px;
+  }
+
+  .feedback__card {
+    grid-template-columns: 109px 695px;
+  }
+
+  .contacts {
+    max-width: 900px;
+  }
+
+  .contacts__link-logo {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .page {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .header__nav {
+    left: 0;
+  }
+
+  .header__menu {
+    margin-left: 35px;
+    width: 500px;
+  }
+
+  .header__menu-link {
+    font-size: 17px;
+  }
+
+  .intro {
+    min-height: 590px;
+  }
+
+  .intro__title {
+    font-size: 78px;
+    line-height: 76px;
+    padding-top: 81px;
+    margin-left: 30px;
+  }
+
+  .intro__button {
+    width: 322px;
+    height: 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .intro__img {
+    width: 425px;
+  }
+
+  .about__grid {
+    justify-items: center;
+    grid-template-columns: 242px 307px;
+    padding-top: 35px;
+    grid-template-rows: 103px 80px 197px 133px;
+    grid-template-areas:
+      "title title"
+      "woman txt1"
+      "woman txt1"
+      "txt2 txt2";
+    column-gap: 24px;
+    row-gap: 17px;
+  }
+
+  .about__img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about__img_dancers {
+    display: none;
+  }
+
+  .about__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .schedule {
+    max-width: 700px;
+  }
+
+  .schedule__nav {
+    width: 625px;
+  }
+
+  .schedule__button {
+    width: 144px;
+    height: 41px;
+  }
+
+  .schedule__weekday-list {
+    width: 72%;
+  }
+
+  .schedule__row-content {
+    width: 590px;
+  }
+
+  .schedule__time {
+    width: 45px;
+  }
+
+  .teachers__title-container {
+    max-width: 90%;
+    margin: 0 auto 65px;
+  }
+
+  .teachers {
+    min-height: 875px;
+    position: relative;
+  }
+
+  .teachers__swiper {
+    left: 27px;
+  }
+
+  .teachers__slide-button {
+    width: 70px;
+    position: absolute;
+    top: 39%;
+    z-index: 3;
+  }
+
+  .teachers__slide-button_next {
+    background: url(./images/teachers__btn_mobile_right.svg) no-repeat center / contain;
+    right: 5%;
+  }
+
+  .teachers__slide-button_prev {
+    background: url(./images/teachers__btn_mobile_left.svg) no-repeat center / contain;
+    left: 5%;
+  }
+
+  .teachers__slide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .teachers__slide:first-of-type {
+    position: relative;
+    left: -100px;
+  }
+
+  .teachers__slide.swiper-slide-active {
+    width: 340px !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .teachers__slide.swiper-slide-next {
+    width: 90px !important;
+  }
+
+  .teachers__slide.swiper-slide-prev {
+    width: 90px !important;
+  }
+
+  .teachers__title {
+    font-size: 63px;
+    line-height: 50px;
+  }
+
+  .teachers__txt {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .gallery__grid {
+    grid-auto-rows: 105px;
+  }
+
+  .feedback {
+    width: 715px;
+  }
+
+  .feedback__card {
+    grid-template-columns: 109px 500px;
+  }
+
+  .contacts {
+    width: 94%;
+    margin-bottom: 20px;
+  }
+
+  .contacts__title {
+    margin-bottom: 62px;
+  }
+
+  .contacts__txt {
+    margin-bottom: 43px;
+    max-width: 224px;
+  }
+
+  .contacts__map {
+    margin-top: 0;
+    width: 462px;
+    height: 272px;
+  }
+
+  .contacts__social {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .header {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .header__nav {
+    align-items: center;
+  }
+
+  .header__logo {
+    width: 79px;
+  }
+
+  .header__hamburger {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    background: url(./images/menu__mobile.svg) no-repeat center;
+    border: none;
+    transition: all .3s ease;
+  }
+
+  .header__hamburger_active {
+    opacity: .5;
+  }
+
+  .header__menu {
+    margin-top: 20px;
+    margin-left: auto;
+    max-width: 210px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .header__menu-item {
+    margin-bottom: 14px;
+  }
+
+  .header__menu-link {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .intro {
+    max-width: 268px;
+    min-height: 585px
+  }
+
+  .intro__title {
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13px;
+    max-width: 239px;
+    font-size: 41.6861px;
+    line-height: 43px;
+  }
+
+  .intro__title-first {
+    margin-left: 36px;
+  }
+
+  .intro__title-last {
+    margin-left: 75px;
+  }
+
+  .intro__button {
+    margin: 0 auto;
+    width: 223px;
+    height: 53px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .intro__img {
+    top: -20px;
+    position: relative;
+    width: 268px;
+  }
+
+  .about__grid {
+    padding-top: 5px;
+    grid-template-rows: 103px 183px 136px;
+    grid-template-columns: 97px 147px;
+    gap: 21px;
+    grid-template-areas:
+      "title title"
+      "woman txt1"
+      "txt2 txt2";
+  }
+
+  .about__title {
+    font-size: 26px;
+    line-height: 27px;
+    margin-bottom: 40px;
+  }
+
+  .about__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .about__img {
+    border-radius: 7px;
+  }
+
+  .schedule {
+    margin-top: 65px;
+    max-width: 82%;
+  }
+
+  .schedule__title {
+    font-size: 26px;
+    line-height: 27px;
+  }
+
+  .schedule__subtitle {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .schedule__slide-btn {
+    display: none;
+  }
+
+  .schedule__block {
+    width: 100%;
+    min-height: 374px;
+  }
+
+  .schedule__nav {
+    width: 100%;
+  }
+
+  .schedule__weekday-list {
+    width: 100%;
+  }
+
+  .schedule__weekday {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .schedule__weekday_active {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .schedule__slide {
+    margin-top: 30px;
+  }
+
+  .schedule__row {
+    border-bottom: none;
+    padding-left: 0;
+    margin-bottom: 24px;
+  }
+
+  .schedule__row-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .schedule__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 14px;
+    min-width: 58px;
+    height: 90px;
+    border-left: 1px solid rgba(146, 146, 146, 0.4);
+    border-right: 1px solid rgba(146, 146, 146, 0.4);
+    margin-bottom: 0;
+  }
+
+  .schedule__lesson {
+    text-align: start;
+    max-width: 178px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+
+  .schedule__teacher {
+    max-width: 80px;
+    font-size: 9px;
+    line-height: 100%;
+    text-align: start;
+    margin-bottom: 5px;
+  }
+
+  .schedule__level {
+    max-width: 98px;
+    font-size: 9px;
+    line-height: 100%;
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .schedule__button {
+    display: none;
+  }
+
+  .teachers {
+    max-width: 280px;
+    min-height: 480px;
+  }
+
+  .teachers__title {
+    font-size: 26px;
+    line-height: 27px;
+  }
+
+  .teachers__title-container {
+    margin-bottom: 34px;
+  }
+
+  .teachers__wrapper {
+    min-height: 300px;
+  }
+
+  .teachers__slide {
+    height: 50px;
+  }
+
+  .teachers__slide.swiper-slide-active {
+    width: 180px !important;
+    height: 400px !important;
+  }
+
+  .teachers__slide.swiper-slide-prev {
+    width: 2px !important;
+    height: 2px !important;
+  }
+
+  .teachers__slide.swiper-slide-next {
+    width: 2px !important;
+    height: 2px !important;
+  }
+
+  .teachers__slide:first-of-type {
+    left: -47px;
+  }
+
+  .teachers__txt {
+    font-size: 0px;
+    line-height: 12px;
+  }
+
+  .teachers__subtitle {
+    font-size: 0px;
+    margin-bottom: 12px;
+  }
+
+  .teachers__slide.swiper-slide-active .teachers__txt {
+    font-size: 10px;
+  }
+
+  .teachers__slide.swiper-slide-active .teachers__subtitle {
+    font-size: 12px;
+  }
+
+  .teachers__swiper {
+    left: -25px;
+  }
+
+  .teachers__slide-button {
+    top: 33%;
+    width: 7px;
+  }
+
+  .gallery__title {
+    width: 220px;
+    position: relative;
+    left: -25px;
+    font-size: 26px;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .gallery__grid {
+    grid-auto-rows: 55px;
+    gap: 8px;
+  }
+
+  .gallery__grid::after {
+    width: 67px;
+  }
+
+  .gallery__grid::before {
+    width: 67px;
+  }
+
+  .gallery__img {
+    border-radius: 12.5px;
+  }
+
+  .feedback {
+    width: 268px;
+  }
+
+  .feedback__title {
+    font-size: 26px;
+    line-height: 27px;
+    margin-bottom: 30px;
+  }
+
+  .feedback__card {
+    padding: 20px 0 20px 22px;
+    grid-template-columns: 53px 165px;
+    grid-template-rows: 53px 100px;
+    gap: 15px;
+    border-radius: 6.5px;
+    align-items: center;
+  }
+
+  .feedback__card:not(:first-of-type) {
+    display: none;
+  }
+
+  .feedback__img {
+    width: 53px;
+    height: 53px;
+    grid-row-end: 2;
+  }
+
+  .feedback__user-name {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .feedback__txt {
+    font-size: 12px;
+    line-height: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .feedback__slide-btn {
+    display: none;
+  }
+
+  .feedback__link {
+    display: none;
+  }
+
+  .feedback__pagination {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feedback__pagination .swiper-pagination-bullet {
+    width: 39px;
+    height: 2px;
+    border-radius: 3.5px;
+    background: rgba(146, 146, 146, 0.4);
+  }
+
+  .feedback__pagination .swiper-pagination-bullet-active {
+    background: #B7BCCF;
+  }
+
+  .contacts {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  .contacts {
+    width: 100%;
+  }
+
+  .contacts__title {
+    margin-left: 10%;
+    font-size: 26px;
+    line-height: 27px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__container {
+    flex-direction: column;
+  }
+
+  .contacts__info {
+    margin-left: 10%;
+  }
+
+  .contacts__txt {
+    max-width: 268px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 14px;
+  }
+
+  .contacts__number {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contacts__social {
+    margin-top: 30px;
+  }
+
+  .contacts__link-logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contacts__map {
+    margin-top: 40px;
+    width: 100%;
+    height: calc(100vw - (100vw * .51));
   }
 }
