@@ -47,8 +47,7 @@
       <button type="button" class="intro__button button">Записаться</button>
       <img src="./images/intro__img.jpg" alt="Танцующая женщина" class="intro__img">
     </section>
-    <section class="about">
-      <a name="about"></a>
+    <section class="about" id="about">
       <div class="about__grid">
         <h2 class="about__title">О нас</h2>
         <img src="./images/woman.jpg" alt="Женщина с ноутбуком" class="about__img about__img_woman">
@@ -64,19 +63,19 @@
       </div>
     </section>
     <section class="schedule">
-      <h2 class="schedule__title"><a name="schedule"></a>Расписание</h2>
+      <h2 class="schedule__title" id="schedule">Расписание</h2>
       <p class="schedule__subtitle">Детские направления</p>
       <div class="schedule__block schedule__block_children">
         <nav class="schedule__nav">
           <button type="button" class="schedule__slide-btn schedule__slide-btn_prev"></button>
           <ul class="schedule__weekday-list">
-            <li class="schedule__weekday schedule__weekday_active" id="children_1">ПН</li>
-            <li class="schedule__weekday" id="children_2">ВТ</li>
-            <li class="schedule__weekday" id="children_3">СР</li>
-            <li class="schedule__weekday" id="children_4">ЧТ</li>
-            <li class="schedule__weekday" id="children_5">ПТ</li>
-            <li class="schedule__weekday" id="children_6">СБ</li>
-            <li class="schedule__weekday" id="children_7">ВС</li>
+            <li class="schedule__weekday schedule__weekday_active" data-name="children_1">ПН</li>
+            <li class="schedule__weekday" data-name="children_2">ВТ</li>
+            <li class="schedule__weekday" data-name="children_3">СР</li>
+            <li class="schedule__weekday" data-name="children_4">ЧТ</li>
+            <li class="schedule__weekday" data-name="children_5">ПТ</li>
+            <li class="schedule__weekday" data-name="children_6">СБ</li>
+            <li class="schedule__weekday" data-name="children_7">ВС</li>
           </ul>
           <button type="button" class="schedule__slide-btn schedule__slide-btn_next"></button>
         </nav>
@@ -283,13 +282,13 @@
         <nav class="schedule__nav">
           <button type="button" class="schedule__slide-btn schedule__slide-btn_prev"></button>
           <ul class="schedule__weekday-list">
-            <li class="schedule__weekday schedule__weekday_active" id="adults_1">ПН</li>
-            <li class="schedule__weekday" id="adults_2">ВТ</li>
-            <li class="schedule__weekday" id="adults_3">СР</li>
-            <li class="schedule__weekday" id="adults_4">ЧТ</li>
-            <li class="schedule__weekday" id="adults_5">ПТ</li>
-            <li class="schedule__weekday" id="adults_6">СБ</li>
-            <li class="schedule__weekday" id="adults_7">ВС</li>
+            <li class="schedule__weekday schedule__weekday_active" data-name="adults_1">ПН</li>
+            <li class="schedule__weekday" data-name="adults_2">ВТ</li>
+            <li class="schedule__weekday" data-name="adults_3">СР</li>
+            <li class="schedule__weekday" data-name="adults_4">ЧТ</li>
+            <li class="schedule__weekday" data-name="adults_5">ПТ</li>
+            <li class="schedule__weekday" data-name="adults_6">СБ</li>
+            <li class="schedule__weekday" data-name="adults_7">ВС</li>
           </ul>
           <button type="button" class="schedule__slide-btn schedule__slide-btn_next"></button>
         </nav>
@@ -491,10 +490,10 @@
         </div>
       </div>
     </section>
-    <section class="teachers" name="teachers">
+    <section class="teachers">
       <div class="teachers__title-container">
         <button type="button" class="teachers__slide-button teachers__slide-button_prev"></button>
-        <h2 class="teachers__title"><a name="teachers"></a>Преподаватели</h2>
+        <h2 class="teachers__title" id="teachers">Преподаватели</h2>
         <button type="button" class="teachers__slide-button teachers__slide-button_next"></button>
       </div>
       <div class="teachers__swiper swiper">
@@ -787,8 +786,8 @@
         <div class="feedback__pagination"></div>
       </div>
     </section>
-    <section class="contacts" name="contacts">
-      <h2 class="contacts__title"><a name="contacts"></a>Контакты</h2>
+    <section class="contacts">
+      <h2 class="contacts__title" id="contacts">Контакты</h2>
       <div class="contacts__container">
         <div class="contacts__info">
           <p class="contacts__txt">До встречи в ZOOME DANCE STUDIO</p>
@@ -802,8 +801,7 @@
           </div>
         </div>
         <iframe class="contacts__map"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Afa600943a24e05d294f32f92ea4803c7a7042fba3cf40e8128b83fd341c7fd55&amp;source=constructor"
-          frameborder="0"></iframe>
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Afa600943a24e05d294f32f92ea4803c7a7042fba3cf40e8128b83fd341c7fd55&amp;source=constructor"></iframe>
       </div>
     </section>
   </main>

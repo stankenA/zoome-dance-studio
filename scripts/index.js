@@ -37,7 +37,7 @@ childrenWeekdays.forEach((item) => {
     childrenSchedule.querySelector('.schedule__weekday_active').classList.remove('schedule__weekday_active');
     evt.target.classList.add('schedule__weekday_active');
     closeSlide(allSlidesChildren.querySelector('.schedule__slide_active'));
-    openSlide(allSlidesChildren.querySelector(`#${evt.target.id}`));
+    openSlide(allSlidesChildren.querySelector(`#${evt.target.dataset.name}`));
   });
 });
 
@@ -46,7 +46,7 @@ adultWeekdays.forEach((item) => {
     adultSchedule.querySelector('.schedule__weekday_active').classList.remove('schedule__weekday_active');
     evt.target.classList.add('schedule__weekday_active');
     closeSlide(allSlidesAdult.querySelector('.schedule__slide_active'));
-    openSlide(allSlidesAdult.querySelector(`#${evt.target.id}`));
+    openSlide(allSlidesAdult.querySelector(`#${evt.target.dataset.name}`));
   });
 });
 
@@ -55,24 +55,24 @@ adultWeekdays.forEach((item) => {
 function handleTabsPrev(block, humanString) {
   const activeTab = block.querySelector('.schedule__weekday_active');
   activeTab.classList.remove('schedule__weekday_active');
-  let currentTabIdString = activeTab.id + '';
+  let currentTabIdString = activeTab.dataset.name + '';
   let currentTabIdNumber = parseInt((currentTabIdString.split('_').pop()), 10);
   if (currentTabIdNumber > 1) {
-    block.querySelector(`#${humanString}_${currentTabIdNumber - 1}`).classList.add('schedule__weekday_active');
+    block.querySelector(`[data-name="${humanString}_${currentTabIdNumber - 1}"]`).classList.add('schedule__weekday_active');
   } else {
-    block.querySelector(`#${humanString}_7`).classList.add('schedule__weekday_active');
+    block.querySelector(`[data-name="${humanString}_7"]`).classList.add('schedule__weekday_active');
   }
 };
 
 function handleTabsNext(block, humanString) {
   const activeTab = block.querySelector('.schedule__weekday_active');
   activeTab.classList.remove('schedule__weekday_active');
-  let currentTabIdString = activeTab.id + '';
+  let currentTabIdString = activeTab.dataset.name + '';
   let currentTabIdNumber = parseInt((currentTabIdString.split('_').pop()), 10);
   if (currentTabIdNumber < 7) {
-    block.querySelector(`#${humanString}_${currentTabIdNumber + 1}`).classList.add('schedule__weekday_active');
+    block.querySelector(`[data-name="${humanString}_${currentTabIdNumber + 1}"]`).classList.add('schedule__weekday_active');
   } else {
-    block.querySelector(`#${humanString}_1`).classList.add('schedule__weekday_active');
+    block.querySelector(`[data-name="${humanString}_1"]`).classList.add('schedule__weekday_active');
   }
 };
 
