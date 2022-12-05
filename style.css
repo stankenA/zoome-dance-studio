@@ -2,18 +2,31 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background-color: #0C0D11;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.7) 0%, rgba(19, 80, 99, 0) 100%);
   color: #fff;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  overflow-x: hidden;
 }
 
 .header {
+  position: relative;
   padding-top: 33px;
   max-width: 950px;
   margin: 0 auto;
+}
+
+.header__gradient {
+  display: block;
+  width: 639px;
+  height: 493px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.7) 0%, rgba(19, 80, 99, 0) 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(29.83deg);
+  position: absolute;
+  top: -272px;
+  left: -565px;
 }
 
 .header__nav {
@@ -61,11 +74,26 @@
   opacity: .5;
 }
 
+.content {
+  overflow-x: hidden;
+}
+
 .intro {
   position: relative;
   min-height: 814px;
   max-width: 1156px;
   margin: 0 auto;
+}
+
+.intro__gradient {
+  display: block;
+  width: 453px;
+  height: 493px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.7) 0%, rgba(19, 80, 99, 0) 100%);
+  transform: rotate(33.7deg);
+  position: absolute;
+  bottom: -124px;
+  right: -215px;
 }
 
 .intro__title {
@@ -131,6 +159,21 @@
   bottom: 0;
   z-index: 2;
   background: linear-gradient(180deg, rgba(12, 13, 17, 0.94) 0%, rgba(12, 13, 17, 0.62) 22.23%, rgba(12, 13, 17, 0) 71.14%);
+}
+
+.about {
+  position: relative;
+}
+
+.about__gradient {
+  display: block;
+  width: 453px;
+  height: 493px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.7) 0%, rgba(19, 80, 99, 0) 100%);
+  transform: rotate(33.7deg);
+  position: absolute;
+  left: 210px;
+  bottom: 0;
 }
 
 .about__grid {
@@ -356,6 +399,19 @@
   min-height: 688px;
   max-width: 960px;
   margin: 0 auto;
+  position: relative;
+}
+
+.teachers__gradient {
+  display: block;
+  width: 589px;
+  height: 739px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.72) 0%, rgba(19, 80, 99, 0) 100%);
+  transform: rotate(90.32deg);
+  position: absolute;
+  top: -317px;
+  left: 180px;
+  z-index: -1;
 }
 
 .teachers__title-container {
@@ -524,6 +580,19 @@
 .feedback {
   max-width: 1128px;
   margin: 0 auto;
+  position: relative;
+}
+
+.feedback__gradient {
+  display: block;
+  width: 809px;
+  height: 834px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(14, 76, 94, 0.72) 0%, rgba(19, 80, 99, 0) 100%);
+  transform: rotate(90.32deg);
+  position: absolute;
+  bottom: -393px;
+  right: -544px;
+  z-index: -1;
 }
 
 .feedback__title {
@@ -695,6 +764,11 @@
     min-height: 720px;
   }
 
+  .intro__gradient {
+    bottom: -161px;
+    right: -136px;
+  }
+
   .intro__img {
     right: 0;
     width: 505px;
@@ -820,6 +894,13 @@
     width: 425px;
   }
 
+  .about__gradient {
+    width: 366px;
+    height: 349px;
+    left: 121px;
+    bottom: 39px;
+  }
+
   .about__grid {
     justify-items: center;
     grid-template-columns: 242px 307px;
@@ -881,6 +962,10 @@
   .teachers {
     min-height: 875px;
     position: relative;
+  }
+
+  .teachers__gradient {
+    left: 96px;
   }
 
   .teachers__swiper {
@@ -983,6 +1068,13 @@
     margin-right: 5%;
   }
 
+  .header__gradient {
+    width: 183px;
+    height: 131px;
+    left: -83px;
+    top: -53px;
+  }
+
   .header__nav {
     align-items: center;
   }
@@ -1057,6 +1149,13 @@
     top: -20px;
     position: relative;
     width: 268px;
+  }
+
+  .about__gradient {
+    width: 100px;
+    height: 109px;
+    left: 47px;
+    bottom: 107px;
   }
 
   .about__grid {
@@ -1197,6 +1296,13 @@
     min-height: 480px;
   }
 
+  .teachers__gradient {
+    width: 144px;
+    height: 192px;
+    top: -80px;
+    left: 71px;
+  }
+
   .teachers__title {
     font-size: 26px;
     line-height: 27px;
@@ -1289,6 +1395,13 @@
 
   .feedback {
     width: 268px;
+  }
+
+  .feedback__gradient {
+    width: 180px;
+    height: 186px;
+    left: 266px;
+    bottom: -69px;
   }
 
   .feedback__title {
